@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rookou Network | Minecraft Info</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+
+  <header>
+    <div class="header-inner container">
+      <div class="logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">KRYATH</span>
+        <span class="logo-sub">NETWORK</span>
+        <span class="logo-bracket">]</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#servers">Servers</a>
+        <a href="#bedrock">Bedrock</a>
+        <a href="host.html">Host Your Own</a>
+        <a href="#status" class="nav-status">
+          <span class="pulse-dot"></span>Status
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero container">
+      <div class="hero-tag">// rookou network</div>
+      <h1>Join the <span class="accent">Rookou</span> Minecraft Network</h1>
+      <p class="hero-sub">Server addresses, Bedrock steps, and live status for the network you already play on.</p>
+      <a href="https://uptime.kryath.org/status/gamehosting" target="_blank" rel="noopener" class="btn-status">
+        <span class="pulse-dot"></span>
+        View Network Status
+      </a>
+    </section>
+
+    <section id="servers" class="container section">
+      <div class="section-label">// rookou network servers</div>
+      <h2>Java Servers</h2>
+      <div class="server-grid">
+
+        <div class="server-card featured">
+          <div class="card-top">
+            <div class="server-icon survival" aria-hidden="true">⛏</div>
+            <div class="card-badge">Primary</div>
+          </div>
+          <h3>Survival</h3>
+          <p class="card-desc">The main survival world. Build, explore, and thrive on the Rookou Network.</p>
+          <div class="address-block">
+            <span class="addr-label">Address</span>
+            <button class="addr-copy" data-addr="play.rookou.com" onclick="copyAddr(this)">
+              <span class="addr-text">play.rookou.com</span>
+              <span class="copy-icon">⧉</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="server-card">
+          <div class="card-top">
+            <div class="server-icon archive" aria-hidden="true">📦</div>
+          </div>
+          <h3>Archive</h3>
+          <p class="card-desc">Preserved worlds and historical builds from the Rookou Network.</p>
+          <div class="address-block">
+            <span class="addr-label">Address</span>
+            <button class="addr-copy" data-addr="archive.rookou.com" onclick="copyAddr(this)">
+              <span class="addr-text">archive.rookou.com</span>
+              <span class="copy-icon">⧉</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="server-card">
+          <div class="card-top">
+            <div class="server-icon creative" aria-hidden="true">🎨</div>
+          </div>
+          <h3>Creative</h3>
+          <p class="card-desc">Unlimited blocks, unlimited imagination on the Rookou Network.</p>
+          <div class="address-block">
+            <span class="addr-label">Address</span>
+            <button class="addr-copy" data-addr="creative.kryath.org" onclick="copyAddr(this)">
+              <span class="addr-text">creative.kryath.org</span>
+              <span class="copy-icon">⧉</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="server-card">
+          <div class="card-top">
+            <div class="server-icon modded" aria-hidden="true">⚙</div>
+          </div>
+          <h3>Modded</h3>
+          <p class="card-desc">Modpacks and custom content for the adventurous on the Rookou Network.</p>
+          <div class="address-block">
+            <span class="addr-label">Address</span>
+            <button class="addr-copy" data-addr="modded.kryath.org" onclick="copyAddr(this)">
+              <span class="addr-text">modded.kryath.org</span>
+              <span class="copy-icon">⧉</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="bedrock" class="container section">
+      <div class="section-label">// bedrock &amp; mobile edition</div>
+      <h2>Bedrock / Mobile / Console</h2>
+      <p class="section-intro">Playing on mobile, Xbox, or PlayStation? We've got you covered via <strong>GeyserMC</strong> — no Java required.
+      </p>
+
+      <div class="bedrock-grid">
+
+        <div class="bedrock-card mcpe">
+          <div class="bedrock-card-header">
+            <span class="platform-badge mcpe-badge">📱 MCPE / Mobile</span>
+          </div>
+          <p>Connect via the <strong>Add Server</strong> screen in Minecraft Bedrock edition.</p>
+          <div class="connection-table">
+            <div class="conn-row">
+              <span class="conn-key">Server Address</span>
+              <button class="addr-copy inline" data-addr="play.rookou.com" onclick="copyAddr(this)">
+                <span class="addr-text">play.rookou.com</span>
+                <span class="copy-icon">⧉</span>
+              </button>
+            </div>
+            <div class="conn-row">
+              <span class="conn-key">Port</span>
+              <span class="conn-val mono">19132</span>
+            </div>
+          </div>
+          <p class="card-note">Default Geyser port. Make sure you select <em>Bedrock</em> in the server type if prompted.</p>
+        </div>
+
+        <div class="bedrock-card xbox">
+          <div class="bedrock-card-header">
+            <span class="platform-badge xbox-badge">🎮 Xbox / PlayStation</span>
+          </div>
+          <p>Console players join via the <strong>Friends tab</strong> — add the Kryath host profile and join their session.</p>
+          <div class="connection-table">
+            <div class="conn-row">
+              <span class="conn-key">Xbox Gamertag</span>
+              <button class="addr-copy inline" data-addr="KryathHost" onclick="copyAddr(this)">
+                <span class="addr-text">KryathHost</span>
+                <span class="copy-icon">⧉</span>
+              </button>
+            </div>
+          </div>
+          <ol class="steps">
+            <li>Open Minecraft on your Xbox or PlayStation.</li>
+            <li>Go to <strong>Play → Friends tab</strong>.</li>
+            <li>Search for <strong>KryathHost</strong> and add as a friend.</li>
+            <li>Once added, join the server from their profile.</li>
+          </ol>
+          <p class="card-note">Powered by GeyserMC. PlayStation players may need to link a Microsoft/Xbox account.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="status" class="container section">
+      <div class="section-label">// uptime &amp; monitoring</div>
+      <h2>Network Status</h2>
+      <p class="section-intro">Real-time uptime and incident reports for the Rookou Network.</p>
+      <a href="https://uptime.kryath.org/status/gamehosting" target="_blank" rel="noopener" class="status-banner">
+        <div class="status-banner-left">
+          <span class="pulse-dot large"></span>
+          <div>
+            <span class="status-banner-title">Rookou Network — Status Page</span>
+            <span class="status-banner-url">uptime.kryath.org/status/gamehosting</span>
+          </div>
+        </div>
+        <span class="status-banner-arrow">→</span>
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="logo-small">[ROOKOU NETWORK]</span>
+      <span class="footer-copy">Join info, server addresses, and Bedrock setup.</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <script src="main.js"></script>
+</body>
+</html>

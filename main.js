@@ -24,15 +24,8 @@ function showToast() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Hide iframe overlay once loaded
-  const frame = document.getElementById('statusFrame');
-  const overlay = document.getElementById('embedOverlay');
-  if (frame && overlay) {
-    frame.addEventListener('load', () => overlay.classList.add('hidden'));
-  }
-
   // Fade-in on scroll
-  const cards = document.querySelectorAll('.server-card, .bedrock-card, .status-banner, .status-embed-wrap');
+  const cards = document.querySelectorAll('.server-card, .bedrock-card, .status-banner');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
