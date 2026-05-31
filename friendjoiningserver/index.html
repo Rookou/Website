@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Rookou Network | Whitelist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-tag">// access request</div>
+      <h1>Rookou Network Whitelist</h1>
+      <p class="hero-sub">Submit your Minecraft edition and details here, then check the join info page if you need the server address or Bedrock steps.</p>
+      <div class="hero-actions">
+        <a href="../rookounetwork/" class="btn-status">
+          <span class="pulse-dot"></span>
+          Join Info
+        </a>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="section-label">// whitelist form</div>
+      <h2>Submit your request</h2>
+      <p class="section-intro">If the embed does not load, use the direct form link instead.</p>
+
+      <div class="embed-shell">
+        <iframe
+          class="form-frame dark-form-embed"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSe48AyFpFCC0KmnOXdo_Cc2PTQEu8BnD0yn7qUO1U0ALJC7dA/viewform?embedded=true"
+          title="Rookou Network Whitelist Form"
+          loading="lazy"
+          id="whitelistFrame"
+        >
+          Loading form...
+        </iframe>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSe48AyFpFCC0KmnOXdo_Cc2PTQEu8BnD0yn7qUO1U0ALJC7dA/viewform?usp=send_form"
+          target="_blank"
+          rel="noopener"
+          class="btn-status secondary form-fallback"
+          id="formFallback"
+        >
+          Open Form Directly
+        </a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="logo-small">[ROOKOU NETWORK]</span>
+      <span class="footer-copy">Whitelist access page.</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const frame = document.getElementById('whitelistFrame');
+      const fallback = document.getElementById('formFallback');
+      if (!frame || !fallback) return;
+
+      const revealFallback = () => {
+        fallback.classList.add('is-visible');
+      };
+
+      const hideFallback = () => {
+        fallback.classList.remove('is-visible');
+      };
+
+      const timeoutId = window.setTimeout(revealFallback, 4000);
+
+      frame.addEventListener('load', () => {
+        window.clearTimeout(timeoutId);
+        hideFallback();
+      });
+
+      frame.addEventListener('error', () => {
+        window.clearTimeout(timeoutId);
+        revealFallback();
+      });
+    })();
+  </script>
+
+</body>
+</html>
